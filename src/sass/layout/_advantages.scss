@@ -1,0 +1,122 @@
+.advantages {
+  padding-top: 39px;
+  padding-bottom: 97px;
+
+  background-color: $secondaryBgColor;
+  @include media(768px) {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+  @include media(1280px) {
+    padding-top: 39px;
+    padding-bottom: 139px;
+  }
+}
+
+.advantages___list {
+  @include media(768px) {
+    display: flex;
+  }
+}
+
+.advantages___items {
+  position: relative;
+  min-width: 230px;
+  width: 82%;
+  max-width: 394px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-top: 66px;
+  margin-bottom: 38px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media(768px) {
+    min-width: calc((100% - 60px * 2) / 3);
+    width: calc((100% - 60px * 2) / 3);
+    margin-right: 60px;
+    margin-bottom: 0px;
+    padding-top: 86px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include media(1280px) {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 90px;
+  }
+}
+
+.advantages___letter {
+  display: block;
+  margin-bottom: 13px;
+
+  font-family: 'Titan One';
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $accentColor;
+
+  @include media(768px) {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+  @include media(1280px) {
+    font-size: 58px;
+    line-height: 1.74;
+  }
+}
+
+.advantages___letter.udder::before,
+.advantages___items.weight::before,
+.advantages___items.heart::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+
+  content: ' ';
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantages___letter.udder::before {
+  height: 60px;
+  width: 40px;
+
+  background-image: url(..//..//src/images/advantages-1.svg);
+}
+
+.advantages___items.weight::before {
+  background-image: url(..//..//src/images/advantages-2.svg);
+}
+
+.advantages___items.heart::before {
+  background-image: url(..//..//src/images/advantages-3.svg);
+}
+
+.advantages___text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: $primaryTextColor;
+
+  @include media(768px) {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+  @include media(1280px) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
