@@ -4,103 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Eco ice-cream for all family" />
-    <meta property="og:image" content="../src/images/hero-mob-2-min.png" />
     <title>IceCream</title>
 
     <link rel="shortcut icon" href="../src/images/logo.svg" type="image/svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
   </head>
 
   <body class="page">
-    <include src="./partials/header.html"></include>
-
     <main>
       <!-- html-partials -->
       <include src="./src/index.html"></include>
     </main>
-
-    <!-- SCRIPTS -->
-    <!-- main SASS-file -->
-    <script src="./js/index.js"></script>
-
-    <!-- header (mobile menu)-->
-    <script src="./js/mobmenu.js"></script>
-
-    <!-- section header (cart)-->
-    <script src="./js/basket.js"></script>
-
-    <!-- section products -->
-    <script src="./js/overlay.js"></script>
-
-    <!-- section сontacts -->
-    <script src="./js/contacts-modal.js"></script>
-    <script src="./js/modal-franchise.js"></script>
-
-    <!-- section gallery -->
-    <script src="./js/gallery.js"></script>
-
-    <!-- section reviews (slider)-->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- modal window Buy -->
-    <script src="./js/modal.js"></script>
-
-    <!-- modal window About -->
-    <script src="./js/about.js"></script>
-
-    <!-- scroll -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 1,
-        spaceBetween: 3,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    </script>
-    <!-- Initialize Scroll -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#scroll-menu').on('click', "a[href^='#']", function (event) {
-          event.preventDefault();
-          var id = $(this).attr('href'),
-            top = $(id).offset().top;
-          $('body,html').animate({ scrollTop: top }, 1500);
-        });
-        $('#scroll-menu2').on('click', "a[href^='#']", function (event) {
-          event.preventDefault();
-          var id = $(this).attr('href'),
-            top = $(id).offset().top;
-          $('body,html').animate({ scrollTop: top }, 1500);
-        });
-        $('#scroll-menu3').on('click', 'a', function (event) {
-          event.preventDefault();
-          var id = $(this).attr('href'),
-            top = $(id).offset().top;
-          $('body,html').animate({ scrollTop: top }, 1500);
-        });
-      });
-    </script>
   </body>
 </html>
