@@ -5,8 +5,12 @@
   "main": "index.js",
   "homepage": "https://AnnaLakhmaniyk.github.io/ice-cream",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /ice-cream/"
+    "start": "parcel ./src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "repository": {
     "type": "git",
@@ -23,11 +27,13 @@
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.6.2",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "shx": "^0.3.2"
   },
   "dependencies": {
     "all-animation": "^3.0.5",
     "animate.css": "^4.1.1",
+    "push-dir": "^0.4.1",
     "simplelightbox": "^2.10.3"
   }
 }
